@@ -27,11 +27,39 @@ def  beautifulSubarrays(a, m):
                     
 
 
-print beautifulSubarrays([2,5,4,9], 3)
-print beautifulSubarrays([5,9], 2)
-print beautifulSubarrays([5,9,7], 2)
-print beautifulSubarrays([2,5,4,9], 2)
-print beautifulSubarrays([2,5,4,9], 1)
-print beautifulSubarrays([0,2,5,4,9], 1)
+# print beautifulSubarrays([2,5,4,9], 3)
+# print beautifulSubarrays([5,9], 2)
+# print beautifulSubarrays([5,9,7], 2)
+# print beautifulSubarrays([2,5,4,9], 2)
+# print beautifulSubarrays([2,5,4,9], 1)
+# print beautifulSubarrays([0,2,5,4,9], 1)
+
+
+
+def can_I_get_there(a,b,c,d):
+    print a, b, c, d
+    if a == c and b == d:
+        
+        return 
+    # possibilities = [(a,b), (a + b, b), (a, b+ a)]
+
+    while a <= c and b <= d:
+        can_I_get_there(a+b,b,c,d) 
+            
+        can_I_get_there(a,a+b,c,d)
+
+        return "YES"
+    return "No"
+            
+        
+        
+    
+
+    
+
+print can_I_get_there(1,2,2,1)
+print can_I_get_there(1,4,5,9)
+print can_I_get_there(1, 1, 4,5)
+
 
 
